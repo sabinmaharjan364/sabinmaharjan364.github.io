@@ -67,6 +67,7 @@
 		Custom Styles
 	-->
 	<style>
+		/* Portfolio Image Sizing */
 		.works .box-item .image {
 			height: 300px;
 			overflow: hidden;
@@ -79,6 +80,83 @@
 			height: 100%;
 			object-fit: contain;
 			object-position: center;
+			transition: transform 0.3s ease;
+		}
+
+		/* Portfolio Card Hover Effects */
+		.works .box-item {
+			transition: all 0.3s ease;
+			border-radius: 8px;
+			overflow: hidden;
+		}
+		.works .box-item:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+		}
+		.works .box-item:hover .image img {
+			transform: scale(1.05);
+		}
+
+		/* Enhanced Buttons */
+		.lnks .lnk {
+			transition: all 0.3s ease;
+			box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+		}
+		.lnks .lnk:hover {
+			transform: translateY(-3px);
+			box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+		}
+
+		/* Social Icons Enhancement */
+		.social a {
+			transition: all 0.3s ease;
+		}
+		.social a:hover {
+			transform: translateY(-3px) scale(1.1);
+		}
+
+		/* Card Shadows for Depth */
+		.card-inner {
+			box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+		}
+
+		/* Service Items Hover */
+		.service-item {
+			transition: all 0.3s ease;
+			padding: 20px;
+			border-radius: 8px;
+		}
+		.service-item:hover {
+			background: rgba(255, 255, 255, 0.05);
+			transform: translateY(-3px);
+		}
+
+		/* Professional Achievements Hover */
+		.fuct-item {
+			transition: all 0.3s ease;
+		}
+		.fuct-item:hover {
+			transform: scale(1.05);
+		}
+
+		/* Improved Typography Spacing */
+		.content .title {
+			margin-bottom: 30px;
+			letter-spacing: 1px;
+		}
+
+		/* Smooth Scroll */
+		html {
+			scroll-behavior: smooth;
+		}
+
+		/* Profile Image Enhancement */
+		.profile .image img {
+			transition: all 0.3s ease;
+		}
+		.profile .image img:hover {
+			transform: scale(1.05);
+			box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 		}
 	</style>
 
@@ -188,7 +266,7 @@
 				<div class="profile">
 
 					<!-- profile image -->
-					<div class="slide" style="background-image: url(images/bg.png);"></div>
+					<div class="slide" style="background-image: url(images/nacp.jpg); background-size: cover; background-position: center top;"></div>
 
 					<!-- profile photo -->
 					<div class="image">
@@ -741,7 +819,7 @@ a full-stack developer from Toowoomba, Australia. I have rich experience in Java
 								<div class="box-item">
 									<a href="https://nacp.org.au/drought" target="_blank">
 										<div class="image">
-											<img src="images/nacp.png" alt="NACP Climate Data Applications" />
+											<img src="images/bg.png" alt="NACP Climate Data Applications" />
 											<span class="info">
 												<span class="ion ion-earth"></span>
 											</span>
