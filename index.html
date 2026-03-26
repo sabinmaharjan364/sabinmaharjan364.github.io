@@ -150,6 +150,97 @@
 			scroll-behavior: smooth;
 		}
 
+		/* Awards Card */
+		.awards-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+			gap: 24px;
+			margin-top: 10px;
+		}
+		.award-card {
+			border-radius: 12px;
+			overflow: hidden;
+			background: rgba(255,255,255,0.04);
+			border: 1px solid rgba(255,255,255,0.08);
+			transition: all 0.3s ease;
+		}
+		.award-card:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 12px 35px rgba(0,0,0,0.3);
+		}
+		.award-card .award-image {
+			width: 100%;
+			height: 210px;
+			overflow: hidden;
+			background: rgba(0,0,0,0.15);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		.award-card .award-image img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center top;
+			transition: transform 0.3s ease;
+		}
+		.award-card:hover .award-image img {
+			transform: scale(1.05);
+		}
+		.award-card .award-image .award-img-placeholder {
+			font-size: 60px;
+			color: rgba(255,255,255,0.15);
+		}
+		.award-card .award-body {
+			padding: 18px 20px 20px;
+		}
+		.award-badge {
+			display: inline-block;
+			padding: 3px 10px;
+			border-radius: 20px;
+			font-size: 11px;
+			font-weight: 600;
+			text-transform: uppercase;
+			letter-spacing: 0.5px;
+			margin-bottom: 10px;
+		}
+		.award-badge.gold   { background: rgba(245,197,24,0.15);  color: #f5c518; border: 1px solid rgba(245,197,24,0.35); }
+		.award-badge.silver { background: rgba(192,192,192,0.15); color: #c0c0c0; border: 1px solid rgba(192,192,192,0.35); }
+		.award-badge.excellence { background: rgba(120,204,109,0.15); color: #78cc6d; border: 1px solid rgba(120,204,109,0.35); }
+		.award-card .award-stars {
+			color: #f5c518;
+			font-size: 15px;
+			margin-bottom: 8px;
+			letter-spacing: 3px;
+		}
+		.award-card .award-stars .fa-star-o {
+			color: rgba(245,197,24,0.3);
+		}
+		.award-card .award-title {
+			font-size: 16px;
+			font-weight: 600;
+			color: #fff;
+			margin-bottom: 4px;
+			line-height: 1.35;
+		}
+		.award-card .award-org {
+			font-size: 13px;
+			color: #78cc6d;
+			font-weight: 500;
+			margin-bottom: 4px;
+		}
+		.award-card .award-meta {
+			font-size: 12px;
+			color: rgba(255,255,255,0.4);
+			margin-bottom: 10px;
+		}
+		.award-card .award-desc {
+			font-size: 13px;
+			color: rgba(255,255,255,0.6);
+			line-height: 1.55;
+			margin: 0;
+		}
+
 		/* Profile Image Enhancement */
 		.profile .image img {
 			transition: all 0.3s ease;
@@ -243,7 +334,12 @@
 								<span class="link">Portfolio</span>
 							</a>
 						</li>
-						
+						<li>
+							<a href="#awards-card">
+								<span class="icon ion-ribbon-b"></span>
+								<span class="link">Awards</span>
+							</a>
+						</li>
 						<li>
 							<a href="#contacts-card">
 								<span class="icon ion-at"></span>
@@ -898,6 +994,115 @@ a full-stack developer from Toowoomba, Australia. I have rich experience in Java
 
 			
 			<!--
+				Card - Awards
+			-->
+			<div class="card-inner" id="awards-card">
+				<div class="card-wrap">
+
+					<!--
+						Awards & Recognition
+					-->
+					<div class="content">
+
+						<!-- title -->
+						<div class="title">Awards & Recognition</div>
+
+						<!-- awards grid -->
+						<div class="awards-grid">
+
+							<!-- Award 1: Excellence Award for Service to Research -->
+							<div class="award-card">
+								<div class="award-image">
+									<img src="images/award-usq.jpg" alt="Excellence Award for Service to Research" onerror="this.parentNode.innerHTML='<span class=&quot;award-img-placeholder ion ion-ribbon-b&quot;></span>'" />
+								</div>
+								<div class="award-body">
+									<span class="award-badge excellence">Excellence</span>
+									<div class="award-stars">
+										<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+									</div>
+									<div class="award-title">Excellence Award for Service to Research</div>
+									<div class="award-org">University of Southern Queensland &middot; 2024</div>
+									<div class="award-meta">In appreciation of excellent contribution to the UniSQ community</div>
+									<p class="award-desc">Recognised for outstanding contributions as a web developer on the Northern Australia Climate Program, delivering real-time climate data tools that serve researchers and the Bureau of Meteorology.</p>
+								</div>
+							</div>
+
+							<!-- Award 2: STARS - Going Above & Beyond -->
+							<div class="award-card">
+								<div class="award-image">
+									<img src="images/award-stars1.jpg" alt="STARS Award Going Above and Beyond" onerror="this.parentNode.innerHTML='<span class=&quot;award-img-placeholder ion ion-ios-star&quot;></span>'" />
+								</div>
+								<div class="award-body">
+									<span class="award-badge excellence">STARS</span>
+									<div class="award-stars">
+										<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+									</div>
+									<div class="award-title">STARS Award &mdash; Going Above &amp; Beyond</div>
+									<div class="award-org">UniSQ &middot; Recognised by Vicki Mayne</div>
+									<div class="award-meta">April 2025</div>
+									<p class="award-desc">Awarded for going above and beyond for the NACP team &mdash; including resolving a critical website issue on a public holiday to ensure the team's work was uninterrupted.</p>
+								</div>
+							</div>
+
+							<!-- Award 3: STARS - Making a Difference -->
+							<div class="award-card">
+								<div class="award-image">
+									<img src="images/award-stars2.jpg" alt="STARS Award Making a Difference" onerror="this.parentNode.innerHTML='<span class=&quot;award-img-placeholder ion ion-ios-star&quot;></span>'" />
+								</div>
+								<div class="award-body">
+									<span class="award-badge excellence">STARS</span>
+									<div class="award-stars">
+										<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+									</div>
+									<div class="award-title">STARS Award &mdash; Making a Difference</div>
+									<div class="award-org">UniSQ &middot; Recognised by Timothy Cowan (Bureau of Meteorology)</div>
+									<div class="award-meta">June 2024</div>
+									<p class="award-desc">Recognised for being instrumental in constructing and updating the NACP products webpage, enabling researchers to showcase their work to stakeholders.</p>
+								</div>
+							</div>
+
+							<!-- Award 4: Business Focus Club 1st Place -->
+							<div class="award-card">
+								<div class="award-image">
+									<img src="images/award-trophy.jpg" alt="Business Focus Club 1st Place" onerror="this.parentNode.innerHTML='<span class=&quot;award-img-placeholder ion ion-trophy&quot;></span>'" />
+								</div>
+								<div class="award-body">
+									<span class="award-badge gold">1st Place</span>
+									<div class="award-stars">
+										<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+									</div>
+									<div class="award-title">1st Place &mdash; Doug Power Speech Contest 2025, Novice Contest</div>
+									<div class="award-org">Business Focus Club Toastmasters</div>
+									<div class="award-meta">25 March 2025</div>
+									<p class="award-desc">Won first place in the club-level Novice Speech Contest at the Doug Power Contest 2025.</p>
+								</div>
+							</div>
+
+							<!-- Award 5: Doug Power Contest Area 1 - 2nd Place -->
+							<div class="award-card">
+								<div class="award-image">
+									<img src="images/award-area1.png" alt="Doug Power Contest Area 1 2nd Place" onerror="this.parentNode.innerHTML='<span class=&quot;award-img-placeholder ion ion-ios-star&quot;></span>'" />
+								</div>
+								<div class="award-body">
+									<span class="award-badge silver">2nd Place</span>
+									<div class="award-stars">
+										<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>
+									</div>
+									<div class="award-title">2nd Place &mdash; Doug Power Speech Contest 2025, Area 1 Speech Contest</div>
+									<div class="award-org">Business Focus Club Toastmasters</div>
+									<div class="award-meta">12 April 2025</div>
+									<p class="award-desc">Progressed to the Area-level competition and placed 2nd in the Novice Contest, competing against speakers from across the region.</p>
+								</div>
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+
+						<!--
 				Card - Contacts                                                      
 			-->
 			<div class="card-inner contacts" id="contacts-card">
